@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Layout from '@/components/Layout';
 
@@ -19,7 +19,8 @@ const PageLoader = () => (
   </div>
 );
 
-const router = createBrowserRouter([
+// Using HashRouter for GitHub Pages compatibility (static hosting)
+const router = createHashRouter([
   {
     path: '/',
     element: <Layout />,
@@ -36,3 +37,4 @@ const router = createBrowserRouter([
 export default function App() {
   return <RouterProvider router={router} />;
 }
+
