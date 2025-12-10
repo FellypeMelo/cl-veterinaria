@@ -1,4 +1,5 @@
 import { Quote } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 export const DirectorSpotlight = () => {
   return (
@@ -10,7 +11,7 @@ export const DirectorSpotlight = () => {
              <div className="relative">
                 <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary-gold rounded-3xl" />
                 <img 
-                  src="/images/director-portrait.png" 
+                  src={getAssetPath("images/director-portrait.png")} 
                   alt="Dra. Helena Costa - Diretora Clínica"
                   loading="lazy"
                   className="rounded-3xl shadow-2xl relative z-10 w-full object-cover aspect-[4/5]"

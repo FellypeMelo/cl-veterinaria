@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Heart, Activity, Star } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 export const PremiumExperience = () => {
   return (
@@ -11,7 +12,7 @@ export const PremiumExperience = () => {
           <div className="w-full lg:w-1/2 relative">
              <div className="relative z-10 aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl mx-auto max-w-[500px]">
                <img 
-                  src="/images/happy-cat.png" 
+                  src={getAssetPath("images/happy-cat.png")} 
                   alt="Gato feliz na clínica"
                   loading="lazy" 
                   className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-700"

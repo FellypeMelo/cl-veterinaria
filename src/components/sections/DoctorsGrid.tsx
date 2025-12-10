@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { getAssetPath } from '@/utils/assets';
 import { Linkedin, Award } from 'lucide-react';
 
 const doctors = [
@@ -7,7 +8,7 @@ const doctors = [
     name: "Dr. Roberto Silva",
     specialty: "Diretor Clínico e Cirurgião",
     crm: "CRMV-SP -----",
-    image: "/images/vet-male-1.png",
+    image: "images/vet-male-1.png",
     bio: "Mestre em Cirurgia de Tecidos Moles pela USP. 20 anos de experiência."
   },
   {
@@ -15,7 +16,7 @@ const doctors = [
     name: "Dra. Ana Paula",
     specialty: "Oncologia Veterinária",
     crm: "CRMV-SP -----",
-    image: "/images/director-portrait.png",
+    image: "images/director-portrait.png",
     bio: "Especialista em quimioterapia e tratamentos paliativos."
   },
   {
@@ -23,7 +24,7 @@ const doctors = [
     name: "Dr. Carlos Eduardo",
     specialty: "Cardiologia",
     crm: "CRMV-SP -----",
-    image: "/images/vet-male-1.png",
+    image: "images/vet-male-1.png",
     bio: "Doutor em Cardiologia Comparada. Realiza ecocardiogramas e cirurgias cardíacas."
   },
   {
@@ -31,7 +32,7 @@ const doctors = [
     name: "Dra. Juliana Costa",
     specialty: "Dermatologia",
     crm: "CRMV-SP -----",
-    image: "/images/director-portrait.png",
+    image: "images/director-portrait.png",
     bio: "Foco em alergias crônicas e imunoterapia."
   }
 ];
@@ -59,7 +60,7 @@ export const DoctorsGrid = () => {
             >
               <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[3/4]">
                 <img 
-                  src={doctor.image} 
+                  src={getAssetPath(doctor.image)} 
                   alt={doctor.name}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

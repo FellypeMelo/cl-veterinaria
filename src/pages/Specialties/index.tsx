@@ -3,6 +3,7 @@ import { Scene } from '@/components/three/Scene';
 import { AnimalModel } from '@/components/three/AnimalModel';
 import { motion } from 'framer-motion';
 import { Stethoscope, HeartPulse, Bone, Eye, Cat, Syringe, Microscope, Zap, Shield, Clock } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 const diagnosticEquipment = [
   { name: "Raio-X Digital", desc: "Alta resolução para diagnósticos precisos", icon: Zap },
@@ -176,7 +177,7 @@ export default function Specialties() {
               className="relative"
             >
               <img 
-                src="/images/vet-dog.png" 
+                src={getAssetPath("images/vet-dog.png")} 
                 alt="Veterinário examinando cachorro"
                 loading="lazy" 
                 className="rounded-3xl shadow-2xl object-cover h-[400px] w-full"

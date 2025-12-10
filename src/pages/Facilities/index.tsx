@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FacilitiesGallery } from '@/components/sections/FacilitiesGallery';
 import { ShieldCheck, Thermometer, Wind, Activity, Bed, Sparkles, Camera, Lock, ArrowRight } from 'lucide-react';
+import { getAssetPath } from '@/utils/assets';
 
 const facilities = [
   { name: "Recepção Cat Friendly", icon: Sparkles, desc: "Ambiente separado e feromônios para felinos" },
@@ -136,7 +137,7 @@ export default function Facilities() {
               className="order-1 lg:order-2 relative"
             >
               <img 
-                src="/images/surgery-room.png" 
+                src={getAssetPath("images/surgery-room.png")} 
                 alt="UTI Veterinária"
                 loading="lazy" 
                 className="rounded-3xl shadow-2xl"
@@ -157,7 +158,7 @@ export default function Facilities() {
               className="relative"
             >
               <img 
-                src="/images/clinic-exterior.png" 
+                src={getAssetPath("images/clinic-exterior.png")} 
                 alt="Fachada Clínica Moderna"
                 loading="lazy" 
                 className="rounded-3xl shadow-2xl"

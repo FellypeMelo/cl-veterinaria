@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade } from 'swiper/modules';
+import { getAssetPath } from '@/utils/assets';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
@@ -9,22 +10,22 @@ const facilities = [
   {
     title: "Recepção Cat Friendly",
     desc: "Área exclusiva para felinos, reduzindo o estresse da espera.",
-    img: "/images/happy-cat.png"
+    img: "images/happy-cat.png"
   },
   {
     title: "Centro Cirúrgico Avançado",
     desc: "Monitoramento multiparamétrico e anestesia inalatória.",
-    img: "/images/surgery-room.png"
+    img: "images/surgery-room.png"
   },
   {
     title: "UTI 24h",
     desc: "Baias aquecidas, oxigenoterapia e monitoramento constante.",
-    img: "/images/icu-room.png"
+    img: "images/icu-room.png"
   },
   {
     title: "Laboratório Próprio",
     desc: "Resultados de exames em minutos para condutas rápidas.",
-    img: "/images/lab-microscope.png"
+    img: "images/lab-microscope.png"
   }
 ];
 
@@ -46,7 +47,7 @@ export const FacilitiesGallery = () => {
               <SwiperSlide key={index}>
                 <div className="relative w-full h-full">
                   <img 
-                    src={item.img} 
+                    src={getAssetPath(item.img)} 
                     alt={item.title}
                     loading="lazy" 
                     className="w-full h-full object-cover"
@@ -64,3 +65,4 @@ export const FacilitiesGallery = () => {
     </section>
   );
 };
+
