@@ -163,6 +163,16 @@ export default function Layout() {
 
           </div>
 
+
+          {/* Disclaimer */}
+          <div className="bg-white/5 rounded-2xl p-4 mb-8 text-center">
+            <p className="text-gray-400 text-xs leading-relaxed">
+              ⚠️ <strong>Aviso:</strong> Este site é apenas um <strong>template demonstrativo</strong> para fins de portfólio e estudo. 
+              Todos os dados, nomes, imagens e informações apresentados são <strong>fictícios</strong> e não representam 
+              nenhuma empresa, pessoa ou serviço real. Nenhum dado aqui deve ser utilizado para fins comerciais ou reais.
+            </p>
+          </div>
+
           {/* Bottom Bar */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
